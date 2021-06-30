@@ -377,9 +377,6 @@ module Linguist
 
     # Internal: Should this blob be included in repository language statistics?
     def include_in_language_stats?
-      !vendored? &&
-      !documentation? &&
-      !generated? &&
       language && ( defined?(detectable?) && !detectable?.nil? ?
         detectable? :
         DETECTABLE_TYPES.include?(language.type)
