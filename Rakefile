@@ -12,7 +12,7 @@ task :default => :test
 
 Rake::TestTask.new
 
-gem_spec = Gem::Specification.load('github-linguist.gemspec')
+gem_spec = Gem::Specification.load('codeatlas-linguist-fork.gemspec')
 
 Rake::ExtensionTask.new('linguist', gem_spec) do |ext|
   ext.lib_dir = File.join('lib', 'linguist')
